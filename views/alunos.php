@@ -2,6 +2,8 @@
     <tr>
         <th>Nome do Aluno</th>
         <th>Data de Nascimento</th>
+        <th>Editar</th>
+        <th>Deletar</th>
     </tr>
 
     <?php
@@ -9,11 +11,12 @@
             echo "<tr><td>".$linha['nome_aluno']."</td>";
             echo "<td>".$linha['data_nasc']."</td>";
      
-   ?>
-        <td><a href="deletar_aluno.php?id_aluno=<?php echo $linha['id_aluno']; ?>">Deletar</a></td></tr>
-    <?php
-        }
-    ?>         
+            ?>
+            <td><a href="?pagina=inserir_alunos&editar=<?php echo $linha['id_aluno']; ?>">Editar</a></td>
+            <td><a href="deletar_aluno.php?id_aluno=<?php echo $linha['id_aluno']; ?>">Deletar</a></td></tr>
+      <?php
+           }
+       ?>           
 </table>
 
         <div class="container">

@@ -5,7 +5,7 @@
     <head>  
         <title>Digital Innovation One</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/estilo.css">
     </head>
 
     <body>
