@@ -3,16 +3,16 @@
 ?>
 <?php if(!isset($_GET['editar'])){?>
 
-    <h1>INSERIR NOVO CURSO</h1>
+    <h5>INSERIR NOVO CURSO</h5>
 <form method="POST" action="processa_curso.php">
     <br>
-    <label>Nome do curso</label><br>
-    <input type="text" name="nome_curso" placeholder="Insira ao nome do curso">
+    <label class="badge badge-warning" >Nome do curso</label><br>
+    <input class="form-control" type="text" name="nome_curso" placeholder="Insira ao nome do curso">
     <br><br>
-    <label>Carga Horária</label><br>
-    <input type="text" name="carga_horaria" placeholder="Insira a carga horária">
+    <label class="badge badge-warning" >Carga Horária</label><br>
+    <input class="form-control" type="text" name="carga_horaria" placeholder="Insira a carga horária">
     <br><br>
-    <input type="submit" value="Inserir curso">
+    <input class="btn btn-success" type="submit" value="Inserir curso">
 </form>
 
 <?php } else{ ?>
@@ -23,13 +23,13 @@
             <form method="POST" action="editar_curso.php">
                 <input type="hidden" name="id_curso" value="<?php echo $linha['id_curso']; ?>">
                 <br>
-                <label>Nome do curso</label><br>
-                <input type="text" name="nome_curso" placeholder="Nome do curso" value="<?php echo $linha['nome_curso']; ?>">
+                <label class="badge badge-warning" >Nome do curso</label><br>
+                <input class="form-control" type="text" name="nome_curso" placeholder="Nome do curso" value="<?php echo $linha['nome_curso']; ?>">
                 <br><br>
-                <label>Carga Horária</label><br>
-                <input type="text" name="carga_horaria" placeholder="Carga horária" value="<?php echo $linha['carga_horaria']; ?>">
+                <label class="badge badge-warning" >Carga Horária</label><br>
+                <input class="form-control" type="text" name="carga_horaria" placeholder="Carga horária" value="<?php echo $linha['carga_horaria']; ?>">
                 <br><br>
-                <input type="submit" value="Editar curso">
+                <input type="submit" class="btn btn-success" value="Editar curso">
             </form>
 
         <?php } ?>    

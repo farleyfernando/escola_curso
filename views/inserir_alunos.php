@@ -7,13 +7,13 @@
 
 <form method="POST" action="processa_alunos.php">
     <br>
-    <label>Nome do Aluno</label><br>
-    <input type="text" name="nome_aluno" placeholder="Nome do aluno">
+    <label class="badge badge-warning" >Nome do Aluno</label><br>
+    <input class="form-control" type="text" name="nome_aluno" placeholder="Nome do aluno">
     <br><br>
-    <label>Data de Nascimento</label><br>
-    <input type="date" name="data_nasc" placeholder="Data nascimento">
+    <label class="badge badge-warning" >Data de Nascimento</label><br>
+    <input  class="form-control" type="date" name="data_nasc" placeholder="Data nascimento">
     <br><br>
-    <input type="submit" value="Inserir Aluno">
+    <input class="btn btn-success" type="submit" value="Inserir Aluno">
 </form>
 <?php
 // continuação função editar dados
@@ -26,13 +26,13 @@
             <form method="POST" action="editar_aluno.php">
                 <input type="hidden" name="id_aluno" value="<?php echo $linha['id_aluno']; ?>">
                 <br>
-                <label>Nome do Aluno</label><br>
-                <input type="text" name="nome_aluno" placeholder="Nome aluno" value="<?php echo $linha['nome_aluno']; ?>">
+                <label class="badge badge-warning" >Nome do Aluno</label><br>
+                <input  class="form-control" type="text" name="nome_aluno" placeholder="Nome aluno" value="<?php echo $linha['nome_aluno']; ?>">
                 <br><br>
-                <label>Data de Nascimento</label><br>
-                <input type="date" name="data_nasc" placeholder="Data nascimento" value="<?php echo $linha['data_nasc']; ?>">
+                <label class="badge badge-warning" >Data de Nascimento</label><br>
+                <input class="form-control" type="date" name="data_nasc" placeholder="Data nascimento" value="<?php echo $linha['data_nasc']; ?>">
                 <br><br>
-                <input type="submit" value="Editar Aluno">
+                <input class="btn btn-success" type="submit" value="Editar Aluno">
             </form>
 
         <?php } ?>    

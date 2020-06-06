@@ -1,18 +1,19 @@
-<h1>INSERIR NOVA MATRÍCULA</h1><br>
-<h4>Selecionar Aluno e Curso</h4>
+<h5 class="card-title">INSERIR NOVA MATRÍCULA</h5><br>
 
 <form method="POST" action="processa_matricula.php">
-    <select name="escolha_aluno">
-        <option>Selecione um aluno</option>
+    <label class="badge badge-warning" >Selecione o Aluno</label><br>
+    <select class="form-control" name="escolha_aluno">
+        <option>selecione aluno</option>
         <?php
             while($linha = mysqli_fetch_array($consulta_alunos)){
                 echo '<option value="'.$linha['id_aluno'].'">'.$linha['nome_aluno'].'</option>';
             }
         ?>
     </select>
-    <br><br>    
-    <select name="escolha_curso">
-        <option>Selecione o curso</option>
+    <br><br> 
+    <label class="badge badge-warning" >Selecione o Curso</label><br>   
+    <select class="form-control" name="escolha_curso">
+        <option>selecione curso</option>
         <?php
             while($linha = mysqli_fetch_array($consulta_cursos)){
                 echo '<option value="'.$linha['id_curso'].'">'.$linha['nome_curso'].'</option>';
@@ -21,6 +22,6 @@
     </select> 
     <br><br>
 
-    <input type="submit" value="Salvar Matricula"></a>
+    <input class="btn btn-success" type="submit" value="Salvar Matricula"></a>
        
 </form>
